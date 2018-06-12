@@ -1,0 +1,11 @@
+[Pixel]
+struct AlbedoScalar
+{
+  [Input] var Scalar = Real4(1);
+  [FragmentInput][StageInput][Output] var Albedo : Real3;
+  
+  function Main()
+  {
+    this.Albedo *= this.Scalar.XYZ;
+  }
+}

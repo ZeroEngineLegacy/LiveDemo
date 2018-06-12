@@ -1,0 +1,38 @@
+[Version:1]
+Cog 
+{
+	var Name = ""
+	ProjectSettings 
+	{
+		var ProjectName = "LiveDemo"
+		var ProjectOwner = ""
+		var DefaultLevel = "Demo"
+		var ProjectSpace = "Space"
+		var AutoTakeProjectScreenshot = false
+		var Guid = 0x9257003693415902
+	}
+	WindowLaunchSettings 
+	{
+		var LaunchFullscreen = true
+		var WindowedResolution = Integer2{1280, 720}
+	}
+	FrameRateSettings 
+	{
+		var VerticalSync = false
+		var LimitFrameRate = true
+		var FrameRate = 60
+	}
+	LauncherProjectInfo 
+	{
+		var Tags = ""
+		var ExperimentalBranchName = ""
+		var MajorVersion = 1
+		var MinorVersion = 4
+		var PatchVersion = 0
+		var RevisionId = 940
+		var ShortChangeSet = "28eb271a9a4b"
+	}
+	Hierarchy 
+	{
+	}
+}
