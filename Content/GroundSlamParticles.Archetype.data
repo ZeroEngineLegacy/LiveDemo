@@ -47,11 +47,6 @@ Cog
 				var ParticleSort = SpriteParticleSortMode.None
 				var BeamBaseScale = 1
 				var BeamVelocityScale = 1
-				var RibbonWidth = 0.100000001
-				var RibbonLength = 1
-				var RibbonMaxVertices = 200
-				var RibbonSizeCurve = "4f16dfae49806add:DefaultCurve"
-				var RibbonColor = "50a5ee1707f0fb60:DefaultColorGradient"
 			}
 			SphericalParticleEmitter 
 			{
@@ -138,11 +133,6 @@ Cog
 				var ParticleSort = SpriteParticleSortMode.None
 				var BeamBaseScale = 1
 				var BeamVelocityScale = 1
-				var RibbonWidth = 0.100000001
-				var RibbonLength = 1
-				var RibbonMaxVertices = 200
-				var RibbonSizeCurve = "4f16dfae49806add:DefaultCurve"
-				var RibbonColor = "50a5ee1707f0fb60:DefaultColorGradient"
 			}
 			SphericalParticleEmitter 
 			{
@@ -216,7 +206,7 @@ Cog
 				var LocalAabbCenter = Real3{0, 0, 0}
 				var LocalAabbHalfExtents = Real3{1, 1, 1}
 				var GroupSortValue = 0
-				var Material = "5b4df467630ee64b:AdditveSpriteSoft"
+				var Material = "582c50d330d372c3:AdditiveSprite"
 				var BoundingBoxSize = 2
 				var ChildSystem = false
 				var SystemSpace = SystemSpace.WorldSpace
@@ -229,11 +219,6 @@ Cog
 				var ParticleSort = SpriteParticleSortMode.None
 				var BeamBaseScale = 1
 				var BeamVelocityScale = 1
-				var RibbonWidth = 0.100000001
-				var RibbonLength = 1
-				var RibbonMaxVertices = 200
-				var RibbonSizeCurve = "4f16dfae49806add:DefaultCurve"
-				var RibbonColor = "50a5ee1707f0fb60:DefaultColorGradient"
 			}
 			SphericalParticleEmitter 
 			{

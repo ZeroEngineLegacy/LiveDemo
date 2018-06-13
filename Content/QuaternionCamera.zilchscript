@@ -9,7 +9,7 @@
 // Moves with WASD, also uses 'q' and 'e' to pan along the world's up/down vector.
 class QuaternionCamera : ZilchComponent
 {
-  [Dependency] var Camera : Camera = null;
+  [Property] var Viewport = CogPath(".");
   
   // The movement speed of the camera.
   [Property] var Speed : Real = 8.0;
@@ -47,7 +47,7 @@ class QuaternionCamera : ZilchComponent
   function Initialize(initializer : CogInitializer)
   {
     // Get the viewport so we can listen to mouse events
-    var viewport = this.Owner.CameraViewport;
+    var viewport = this.Viewport.CameraViewport;
     
     Zero.Connect(viewport, Events.RightMouseDown, this.OnRightMouseDown);
     Zero.Connect(viewport, Events.RightMouseUp, this.OnRightMouseUp);

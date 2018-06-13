@@ -4,15 +4,25 @@ Cog
 	var Name = "BigPlasmaExplosion"
 	Transform 
 	{
-		var Translation = Real3{1.19139481, 2.92531443, -6.01791477}
+		var Translation = Real3{0, 0, 0}
 		var Scale = Real3{1, 1, 1}
 		var Rotation = Quaternion{0, 0, 0, 1}
 	}
 	ParticleReset 
 	{
 		var ResetInGame = false
-		var TimeToReset = 5
+		var TimeToReset = 2
 		var StartDelay = 0
+	}
+	TimedDeath 
+	{
+		var Lifetime = 4
+		var SendsDeathEvent = true
+		var AutoDestroy = true
+	}
+	ShakeCameraOnInitialize 
+	{
+		var Intensity = 1
 	}
 	Hierarchy 
 	{
@@ -47,11 +57,6 @@ Cog
 				var ParticleSort = SpriteParticleSortMode.None
 				var BeamBaseScale = 1
 				var BeamVelocityScale = 1
-				var RibbonWidth = 0.100000001
-				var RibbonLength = 1
-				var RibbonMaxVertices = 200
-				var RibbonSizeCurve = "4f16dfae49806add:DefaultCurve"
-				var RibbonColor = "50a5ee1707f0fb60:DefaultColorGradient"
 			}
 			LinearParticleAnimator 
 			{
@@ -64,7 +69,7 @@ Cog
 			}
 			SphericalParticleEmitter 
 			{
-				var Active = true
+				var Active = false
 				var EmitCount = 6
 				var EmitDelay = 0
 				var EmitRate = 55
@@ -123,24 +128,19 @@ Cog
 				var ParticleSort = SpriteParticleSortMode.None
 				var BeamBaseScale = 1
 				var BeamVelocityScale = 1
-				var RibbonWidth = 0.100000001
-				var RibbonLength = 1
-				var RibbonMaxVertices = 200
-				var RibbonSizeCurve = "4f16dfae49806add:DefaultCurve"
-				var RibbonColor = "50a5ee1707f0fb60:DefaultColorGradient"
 			}
 			LinearParticleAnimator 
 			{
 				var Force = Real3{0, 0, 0}
 				var RandomForce = Real3{0, 0, 0}
 				var Torque = 0
-				var Growth = 45
+				var Growth = 55
 				var Dampening = 0
 				var Twist = Real3{0, 0, 0}
 			}
 			SphericalParticleEmitter 
 			{
-				var Active = true
+				var Active = false
 				var EmitCount = 1
 				var EmitDelay = 0
 				var EmitRate = 555
@@ -148,7 +148,7 @@ Cog
 				var EmitRateSoftStartTime = 0
 				var Size = 0.100000001
 				var SizeVariance = 0
-				var Lifetime = 0.5
+				var Lifetime = 0.600000024
 				var LifetimeVariance = 0
 				var Spin = 0
 				var SpinVariance = 0
@@ -199,11 +199,6 @@ Cog
 				var ParticleSort = SpriteParticleSortMode.None
 				var BeamBaseScale = 1
 				var BeamVelocityScale = 1
-				var RibbonWidth = 0.100000001
-				var RibbonLength = 1
-				var RibbonMaxVertices = 200
-				var RibbonSizeCurve = "4f16dfae49806add:DefaultCurve"
-				var RibbonColor = "50a5ee1707f0fb60:DefaultColorGradient"
 			}
 			LinearParticleAnimator 
 			{
@@ -216,7 +211,7 @@ Cog
 			}
 			SphericalParticleEmitter 
 			{
-				var Active = true
+				var Active = false
 				var EmitCount = 35
 				var EmitDelay = 0
 				var EmitRate = 55
@@ -261,7 +256,7 @@ Cog
 			}
 			SpriteParticleSystem 
 			{
-				var Visible = true
+				var Visible = false
 				var ViewCulling = true
 				var VisibilityEvents = true
 				var OverrideBoundingBox = false
@@ -281,11 +276,6 @@ Cog
 				var ParticleSort = SpriteParticleSortMode.None
 				var BeamBaseScale = 1
 				var BeamVelocityScale = 1
-				var RibbonWidth = 0.100000001
-				var RibbonLength = 1
-				var RibbonMaxVertices = 200
-				var RibbonSizeCurve = "4f16dfae49806add:DefaultCurve"
-				var RibbonColor = "50a5ee1707f0fb60:DefaultColorGradient"
 			}
 			LinearParticleAnimator 
 			{
@@ -298,7 +288,7 @@ Cog
 			}
 			SphericalParticleEmitter 
 			{
-				var Active = true
+				var Active = false
 				var EmitCount = 8
 				var EmitDelay = 0
 				var EmitRate = 55
@@ -337,7 +327,7 @@ Cog
 			}
 			SpriteParticleSystem 
 			{
-				var Visible = true
+				var Visible = false
 				var ViewCulling = true
 				var VisibilityEvents = true
 				var OverrideBoundingBox = false
@@ -357,11 +347,6 @@ Cog
 				var ParticleSort = SpriteParticleSortMode.None
 				var BeamBaseScale = 1
 				var BeamVelocityScale = 1
-				var RibbonWidth = 0.100000001
-				var RibbonLength = 1
-				var RibbonMaxVertices = 200
-				var RibbonSizeCurve = "4f16dfae49806add:DefaultCurve"
-				var RibbonColor = "50a5ee1707f0fb60:DefaultColorGradient"
 			}
 			LinearParticleAnimator 
 			{
@@ -374,7 +359,7 @@ Cog
 			}
 			SphericalParticleEmitter 
 			{
-				var Active = true
+				var Active = false
 				var EmitCount = 10
 				var EmitDelay = 0
 				var EmitRate = 55
@@ -432,12 +417,30 @@ Cog
 				var ParticleAnimation = SpriteParticleAnimationMode.Single
 				var ParticleSort = SpriteParticleSortMode.None
 				var BeamBaseScale = 0.100000001
-				var BeamVelocityScale = 0.200000003
-				var RibbonWidth = 0.100000001
-				var RibbonLength = 1
-				var RibbonMaxVertices = 200
-				var RibbonSizeCurve = "4f16dfae49806add:DefaultCurve"
-				var RibbonColor = "50a5ee1707f0fb60:DefaultColorGradient"
+				var BeamVelocityScale = 0.100000001
+			}
+			SphericalParticleEmitter 
+			{
+				var Active = false
+				var EmitCount = 35
+				var EmitDelay = 0
+				var EmitRate = 500
+				var EmitVariance = 0
+				var EmitRateSoftStartTime = 0
+				var Size = 0.5
+				var SizeVariance = 0.0250000004
+				var Lifetime = 1
+				var LifetimeVariance = 0.400000006
+				var Spin = 0
+				var SpinVariance = 0
+				var RandomSpin = false
+				var Fill = 0
+				var EmitterVelocityPercent = 0
+				var StartVelocity = Real3{0, 0, 0}
+				var RandomVelocity = Real3{15, 15, 2}
+				var TangentVelocity = Real3{0, 0, 0}
+				var EmitterSize = Real3{0, 0, 0}
+				var FastMovingEmitter = true
 			}
 			LinearParticleAnimator 
 			{
@@ -448,34 +451,17 @@ Cog
 				var Dampening = 1
 				var Twist = Real3{0, 0, 0}
 			}
-			SphericalParticleEmitter 
-			{
-				var Active = true
-				var EmitCount = 25
-				var EmitDelay = 0
-				var EmitRate = 500
-				var EmitVariance = 0
-				var EmitRateSoftStartTime = 0
-				var Size = 1
-				var SizeVariance = 0.0250000004
-				var Lifetime = 1
-				var LifetimeVariance = 0.400000006
-				var Spin = 0
-				var SpinVariance = 0
-				var RandomSpin = false
-				var Fill = 0
-				var EmitterVelocityPercent = 0
-				var StartVelocity = Real3{0, 0, 0}
-				var RandomVelocity = Real3{10, 10, 2}
-				var TangentVelocity = Real3{0, 0, 0}
-				var EmitterSize = Real3{0, 0, 0}
-				var FastMovingEmitter = true
-			}
 			ParticleColorAnimator 
 			{
 				var TimeGradient = "52450b19ac20a48c:ExplosionGradient"
 				var VelocityGradient = "null"
 				var MaxParticleSpeed = 5
+			}
+			ParticleWander 
+			{
+				var WanderAngle = 1
+				var WanderAngleVariance = 1
+				var WanderStrength = 20
 			}
 		}
 		Cog [Id:0x5b4ebe37952b93c0]
@@ -496,7 +482,7 @@ Cog
 				var LocalAabbCenter = Real3{0, 0, 0}
 				var LocalAabbHalfExtents = Real3{1, 1, 1}
 				var GroupSortValue = 0
-				var Material = "582c50d330d372c3:AdditiveSprite"
+				var Material = "5b76fa3436c11d4d:AdditiveSpritePow"
 				var BoundingBoxSize = 2
 				var ChildSystem = false
 				var SystemSpace = SystemSpace.WorldSpace
@@ -509,11 +495,6 @@ Cog
 				var ParticleSort = SpriteParticleSortMode.None
 				var BeamBaseScale = 1
 				var BeamVelocityScale = 1
-				var RibbonWidth = 0.100000001
-				var RibbonLength = 1
-				var RibbonMaxVertices = 200
-				var RibbonSizeCurve = "4f16dfae49806add:DefaultCurve"
-				var RibbonColor = "50a5ee1707f0fb60:DefaultColorGradient"
 			}
 			LinearParticleAnimator 
 			{
@@ -526,13 +507,13 @@ Cog
 			}
 			SphericalParticleEmitter 
 			{
-				var Active = true
-				var EmitCount = 35
+				var Active = false
+				var EmitCount = 55
 				var EmitDelay = 0
-				var EmitRate = 45
+				var EmitRate = 100
 				var EmitVariance = 0
 				var EmitRateSoftStartTime = 0
-				var Size = 2
+				var Size = 5
 				var SizeVariance = 0.0500000007
 				var Lifetime = 1
 				var LifetimeVariance = 0.5
@@ -542,7 +523,78 @@ Cog
 				var Fill = 0
 				var EmitterVelocityPercent = 0
 				var StartVelocity = Real3{0, 0, 0}
-				var RandomVelocity = Real3{1, 1, 0}
+				var RandomVelocity = Real3{4, 4, 4}
+				var TangentVelocity = Real3{0, 0, 0}
+				var EmitterSize = Real3{2, 2, 0}
+				var FastMovingEmitter = false
+			}
+			ParticleColorAnimator 
+			{
+				var TimeGradient = "52450b19ac20a48c:ExplosionGradient"
+				var VelocityGradient = "null"
+				var MaxParticleSpeed = 5
+			}
+		}
+		Cog [Id:0x5b76fb256193d9bc]
+		{
+			var Name = "OuterFire"
+			Transform 
+			{
+				var Translation = Real3{0, 0, 0}
+				var Scale = Real3{1, 1, 1}
+				var Rotation = Quaternion{0, 0, 0, 1}
+			}
+			SpriteParticleSystem 
+			{
+				var Visible = true
+				var ViewCulling = true
+				var VisibilityEvents = true
+				var OverrideBoundingBox = false
+				var LocalAabbCenter = Real3{0, 0, 0}
+				var LocalAabbHalfExtents = Real3{1, 1, 1}
+				var GroupSortValue = 0
+				var Material = "5b76fa3436c11d4d:AdditiveSpritePow"
+				var BoundingBoxSize = 2
+				var ChildSystem = false
+				var SystemSpace = SystemSpace.WorldSpace
+				var WarmUpTime = 0
+				var PreviewInEditor = false
+				var VertexColor = Real4{1, 1, 1, 0.355000019}
+				var GeometryMode = SpriteParticleGeometryMode.Billboarded
+				var SpriteSource = "5b4c21cbb44b5f58:Smoke2"
+				var ParticleAnimation = SpriteParticleAnimationMode.Single
+				var ParticleSort = SpriteParticleSortMode.None
+				var BeamBaseScale = 1
+				var BeamVelocityScale = 1
+			}
+			LinearParticleAnimator 
+			{
+				var Force = Real3{0, 0, 0}
+				var RandomForce = Real3{0, 0, 0}
+				var Torque = 0
+				var Growth = 0
+				var Dampening = 0
+				var Twist = Real3{0, 0, 0}
+			}
+			SphericalParticleEmitter 
+			{
+				var Active = false
+				var EmitCount = 100
+				var EmitDelay = 0
+				var EmitRate = 400
+				var EmitVariance = 0
+				var EmitRateSoftStartTime = 0
+				var Size = 5
+				var SizeVariance = 0.0500000007
+				var Lifetime = 1
+				var LifetimeVariance = 0.5
+				var Spin = 0
+				var SpinVariance = 0
+				var RandomSpin = true
+				var Fill = 0
+				var EmitterVelocityPercent = 0
+				var StartVelocity = Real3{0, 0, 0}
+				var RandomVelocity = Real3{14, 14, 14}
 				var TangentVelocity = Real3{0, 0, 0}
 				var EmitterSize = Real3{2, 2, 0}
 				var FastMovingEmitter = false
@@ -578,18 +630,13 @@ Cog
 				var SystemSpace = SystemSpace.WorldSpace
 				var WarmUpTime = 0
 				var PreviewInEditor = false
-				var VertexColor = Real4{35, 35, 35, 1}
+				var VertexColor = Real4{55, 55, 55, 1}
 				var GeometryMode = SpriteParticleGeometryMode.Beam
 				var SpriteSource = "5aad8648b3f31212:FastSpark"
 				var ParticleAnimation = SpriteParticleAnimationMode.Single
 				var ParticleSort = SpriteParticleSortMode.None
 				var BeamBaseScale = 1
-				var BeamVelocityScale = 1
-				var RibbonWidth = 0.100000001
-				var RibbonLength = 1
-				var RibbonMaxVertices = 200
-				var RibbonSizeCurve = "4f16dfae49806add:DefaultCurve"
-				var RibbonColor = "50a5ee1707f0fb60:DefaultColorGradient"
+				var BeamVelocityScale = 0.300000012
 			}
 			LinearParticleAnimator 
 			{
@@ -602,7 +649,7 @@ Cog
 			}
 			SphericalParticleEmitter 
 			{
-				var Active = true
+				var Active = false
 				var EmitCount = 86
 				var EmitDelay = 0
 				var EmitRate = 500
@@ -618,7 +665,7 @@ Cog
 				var Fill = 0
 				var EmitterVelocityPercent = 0
 				var StartVelocity = Real3{0, 0, 0}
-				var RandomVelocity = Real3{15, 15, 2}
+				var RandomVelocity = Real3{45, 45, 2}
 				var TangentVelocity = Real3{0, 0, 0}
 				var EmitterSize = Real3{0, 0, 0}
 				var FastMovingEmitter = true
@@ -628,6 +675,77 @@ Cog
 				var TimeGradient = "52450b19ac20a48c:ExplosionGradient"
 				var VelocityGradient = "null"
 				var MaxParticleSpeed = 5
+			}
+		}
+		Cog [Id:0x5b76feec6f9633c4]
+		{
+			var Name = "Debri"
+			Transform 
+			{
+				var Translation = Real3{0, 0, 0}
+				var Scale = Real3{1, 1, 1}
+				var Rotation = Quaternion{0, 0, 0, 1}
+			}
+			ObjectParticleSystem 
+			{
+				var Active = false
+				var EmittedObject = "5b76fee469ec29a6:ExplosionDebri"
+				var Color = Real4{4, 4, 4, 1}
+				var EmitCount = 85
+				var EmitRate = 555
+				var Size = 0.800000012
+				var SizeVariance = 0.100000001
+				var Lifetime = 2
+				var LifetimeVariance = 0.5
+				var StartVelocity = Real3{0, 10, 0}
+				var RandomVelocity = Real3{45, 10, 45}
+				var EmitterSize = Real3{0, 0, 0}
+				var TimeGradient = "5b76fa411e3ecaa2:PlasmaDebri"
+			}
+		}
+		Cog [Id:0x5b76e386456d4f76]
+		{
+			var Name = "ForceEffect"
+			Transform 
+			{
+				var Translation = Real3{0, 0, 0}
+				var Scale = Real3{1, 1, 1}
+				var Rotation = Quaternion{0, 0, 0, 1}
+			}
+			SphereCollider 
+			{
+				var Ghost = true
+				var SendsEvents = true
+				var Material = "4de020863e872da8:DefaultPhysicsMaterial"
+				var CollisionGroup = "5b769d4b7a9c73e6:Explosion"
+				var Offset = Real3{0, 0, 0}
+				var Radius = 8.98999977
+			}
+			Region 
+			{
+				var WakeUpOnEffectChange = true
+			}
+			PointForceEffect 
+			{
+				var Active = true
+				var WakeUpOnChange = true
+				var DebugDrawEffect = true
+				var MinDistance = 0
+				var MaxDistance = 9
+				var StrengthAtMin = 120
+				var StrengthAtMax = 0
+				var LocalPositionOffset = Real3{0, 0, 0}
+				var InterpolationType = PhysicsEffectInterpolationType.Quadratic
+				var EndCondition = PhysicsEffectEndCondition.ClampToMax
+			}
+			TimedDeath 
+			{
+				var Lifetime = 0.0599999987
+				var SendsDeathEvent = true
+				var AutoDestroy = true
+			}
+			Hierarchy 
+			{
 			}
 		}
 	}

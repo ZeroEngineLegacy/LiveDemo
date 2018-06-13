@@ -25,4 +25,9 @@ Material
 	{
 		var RoughnessMap = "5b4371dd220c4679:MutantRoughness"
 	}
+	PbrScalars 
+	{
+		var MetallicScalar = 1.29999995
+		var RoughnessScalar = 1
+	}
 }

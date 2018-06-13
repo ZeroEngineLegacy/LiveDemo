@@ -10,6 +10,6 @@ struct PbrScalars
   function Main()
   {
     this.Metallic *= this.MetallicScalar;
-    this.Metallic *= this.MetallicScalar;
+    this.Roughness *= this.RoughnessScalar;
   }
 }
